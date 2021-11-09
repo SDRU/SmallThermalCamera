@@ -1,0 +1,7 @@
+sudo modprobe v4l2loopback video_nr=0,1,2
+sudo make
+sudo ./flir8i
+(displays temperature and captures the camera stream)
+
+mplayer tv:// -tv driver=v4l2:device=/dev/video1
+(display video)
